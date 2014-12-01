@@ -4,7 +4,7 @@
 ### Background
 
 
-<img src="http://public.media.smithsonianmag.com/legacy_blog/first-daily-planet1.jpg">
+<img src="daily_planet.jpg">
 
 Weclome to the daily planet, we need your superhuman developer skills to help us share news with the world. We've seen that you have some express knowledge and need you to make us a mock website as soon as possible.
 
