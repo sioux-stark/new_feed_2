@@ -1,5 +1,5 @@
 # Making Headlines
-## Intro to Express
+## Review Express
 
 ### Background
 
@@ -8,7 +8,7 @@
 
 Weclome to the daily planet, we need your superhuman developer skills to help us share news with the world. We've seen that you have some express knowledge and need you to make us a mock website as soon as possible.
 
-You'll need to use an array of `articles` to create and display articles.
+You'll need to use a database of articles to complete this assignment.
 
 ## Routes
 
@@ -18,6 +18,7 @@ You'll need the following `article` routes:
 * `get` `/articles/new` to get a form to save a new article
 * `post` `/articles` to save an article
 * `get` `/articles/:id` to find an article by id in the array of `articles` and display it.
+* `delete` `/articles/:id` to delete a particular article
 
 You'll need the following `site` related routes:
 
@@ -28,6 +29,15 @@ You'll need the following `site` related routes:
 ## Structure
 
 All your article related views should be in an `views/articles` folder. Each article should utilize `ejs` to render the page. Your `site` related views `index`, `about`, and `contact` should also have a folder `views/site`. 
+
+## Styling
+
+Your application must be styled, so be sure to include the following:
+
+```
+app.use(express.static(__dirname + '/public'))
+```
+and a `public/` folder with your stylesheets.
 
 
 ## Bonus
