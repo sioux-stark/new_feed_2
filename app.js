@@ -3,8 +3,11 @@ var bodyParser = require('body-parser');
 
 var app = express();
 pg = require("pg");
+// app.use(methodOverride("_method"));
 
-config =  {
+app.use(express.static( __dirname + '/public'));
+
+ var config =  {
     database: "articles",
     port: 5432,
     host: "localhost"
@@ -13,7 +16,7 @@ config =  {
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 
-var articles = [{title: 'article one', content: 'stuff in article one.'}, {title: 'article two', content: 'stuff in article two'}];
+// var articles = [{title: 'article one', content: 'stuff in article one.'}, {title: 'article two', content: 'stuff in article two'}];
 
 app.get('/articles', function (req,res) {
    pg.connect(config, function(err, client, done){
@@ -39,6 +42,10 @@ app.get('/articles/new', function (req,res) {
 app.get('/articles/show/:id', function (req,res){
   res.render('articles/show', {articleId: req.params.id});
 });
+
+// app.get('/articles/show/:id', function (req,res){
+//   res.render('articles/show', {articleTitle: req.params.title});
+// });
 
 app.post('/articles', function (req,res) {
 pg.connect(config, function(err, client, done){

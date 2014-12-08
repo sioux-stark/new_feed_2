@@ -1,7 +1,9 @@
 <!--views/articles/index.ejs-->
 <!DOCTYPE HTML>
 <html>
+<head> <link href="/stylesheets/main.css" rel="stylesheet"> </head>
 <body>
+<div id="pageContainer" class="pageContainer">
 <h1>Articles index, summary of article</h1>
 <!-- THIS HAS TO MATCH RESPONSE OBJ THAT WE CREATE FROM THE ROWS OF QUERY -->
 <% articlesList.forEach(function(article) { %>
@@ -11,6 +13,7 @@
   <div>
     <%= article.author %>
   </div>
+</div>
 </div>
 <% }) %>
 </body>

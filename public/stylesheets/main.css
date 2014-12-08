@@ -1,0 +1,20 @@
+body {
+  background-image: url(Newspaper_stacks_texture_2.jpg);
+  color: white;
+  width: 100%;
+}
+
+
+.pageContainer {
+        width: 85em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3em;
+        background: aqua;
+        border: dashed 3px red;
+        height: 100%;
+
+
+    }
+
+
